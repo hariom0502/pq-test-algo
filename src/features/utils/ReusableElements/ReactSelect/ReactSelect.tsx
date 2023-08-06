@@ -10,6 +10,7 @@ export const selectCustomStyles: StylesConfig<SelectOption, false, GroupBase<Sel
     border: 'none!important',
     boxShadow: 'none!important',
     minHeight: '33px',
+    backgroundColor: 'var(--pq-input-bg)'
   }),
   indicatorsContainer: (styles) => ({
     ...styles,
@@ -29,8 +30,13 @@ export const selectCustomStyles: StylesConfig<SelectOption, false, GroupBase<Sel
       paddingLeft: `${12 + indentSize * (data?.depth || 0)}px`,
     }
   },
+  menu: (styles) => ({
+    ...styles,
+    backgroundColor: 'var(--pq-input-bg)'
+  }),
   container: (styles) => ({
     ...styles,
+    backgroundColor: 'var(--pq-input-bg)'
     // commented out zIndex to fix overlapping issue on right side of the blogPostForm,
     // instead of putting zIndex here, we put it on the parent of the react-select
     // zIndex: 3,
